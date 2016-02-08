@@ -1,0 +1,14 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.big-row th, .big-row td{
+  width: 120px;
+  background-color: #EBEBEB;
+  margin-top: 2px;
+}
+
+.big-col {
+  width: 220px !important;
+}

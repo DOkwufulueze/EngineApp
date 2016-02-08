@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user.name %>'s Contact List</h1>
+
+<table>
+  <thead>
+    <tr class="big-row">
+      <th class="big-col">Name</th>
+      <th class="big-col">Email Address</th>
+      <th class="big-col">Phone Number</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr class="big-row">
+        <td class="big-col"><%= contact.name %></td>
+        <td class="big-col"><%= contact.email %></td>
+        <td class="big-col"><%= contact.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

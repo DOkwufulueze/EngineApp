@@ -1,0 +1,12 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.big-row th, .big-row td{
+  width: 120px;
+  background-color: #EBEBEB;
+  margin-top: 2px;
+}
+
+.big-col {
+  width: 220px !important;
+}
