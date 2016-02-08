@@ -1,3 +1,20 @@
 = Contacts
 
-This project rocks and uses MIT-LICENSE.
+* Ruby version: ruby-2.2.1 [ x86_64 ]
+
+* System dependencies: Check the engine's contacts.gemspec file.
+
+This engine manages contact details of any application that offers appropriate entities.
+
+Install this engine (gem) in the Gemfile of the candidate application thus:
+  gem 'contacts', path: 'lib/engines/contacts'
+
+Mount this engine on the candidate application in the routes.rb file of that application thus:
+  mount Contacts::Engine => "/contacts"
+
+Install this engine's migrations on the candidate application thus:
+  rake contacts:install:migrations
+
+Specify the class name of the candidate application's model into which this engine is to be embedded in the contacts (yes contacts, not constants) initializer of the candidate application. For example, if the candidate application is demo, and the target model is User, then specify the class name in demo/config/initializers/contacts.rb thus:
+  Constants.user_class = "User"
+The specification above automatically ties this engine with the User model. This engine can be tied to many models this way.
